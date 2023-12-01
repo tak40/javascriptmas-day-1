@@ -1,39 +1,65 @@
-:root {
-  --wine-red: #C7375F;
-  --bright-red: #D42D2F;
-  --dark-green: #344D2F;
-  --light-green: #77A047;
-  --gold: #FAC57D;
-  --snow: #F0F4F7;
-}
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
 
-html, body {
-    margin: 0;
-    padding: 0;
+:root {
+  --gradient-dark-red: #a52a2a; 
+  --gradient-light-red: #f6a3aa; 
+  --gradient-transparent: rgba(252, 118, 129, 0);
+  --title-shadow: rgba(0, 0, 0, 0.75);
+  --text-shadow: rgba(0, 0, 0, 0.5);
+  --snow-white: #F0F4F7;
+  --gold: #FAC57D;
+  --background-gradient: radial-gradient(
+    at center, 
+    var(--gradient-dark-red) 10%,      
+    var(--gradient-light-red) 40%,     
+    var(--gradient-transparent) 70%    
+  );
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mountains of Christmas', cursive;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center;
-    color: var(--dark-green);
-    background-color: var(--snow);
+    background-color: var(--snow-white);
+    background-image: url('/images/background.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--snow-white);
+    text-shadow: 0 0 10px var(--title-shadow), 0 0 20px var(--title-shadow);
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    background: var(--wine-red);
-    color: var(--snow);
-    padding: 1em 2em;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 2em;
+    border-radius: 10px;
+    background: var(--background-gradient);
+    text-align: center;
+    color: var(--snow-white);
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .countdown-display {
-    font-size: 100px;
-    margin: 0;
+    font-size: 6em;
+    font-weight: bold;
+    margin: 0.5em 0;
+    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 5px var(--text-shadow), 0 0 10px var(--text-shadow); 
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold), 0 0 30px var(--gold), 0 0 40px var(--gold);
+    }
+    to {
+        text-shadow: 0 0 20px var(--gold), 0 0 30px var(--gold), 0 0 40px var(--gold), 0 0 50px var(--gold), 0 0 60px var(--gold);
+    }
 }
