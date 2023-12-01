@@ -5,7 +5,7 @@ This project features a simple JavaScript application that counts down the days 
 
 ![JavaScript Christmas Countdown](./images/day1.png)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/77d186a8-9168-4f63-978c-2d69c879ca99/deploy-status)](https://app.netlify.com/sites/stalwart-elf-4d91bd/deploys)
+![Scrim](https://scrimba.com/scrim/cof6248ed889a4034c123bca7)
 
 ## Table of Contents
 1. [Project Overview](#overview)

@@ -4,11 +4,8 @@ const countdownDisplay = document.getElementById('countdown-display')
 
 function renderCountdown() {
     const now = new Date()
-    console.log(now)
     const currentYear = now.getFullYear()
-    console.log(currentYear)
     const christmas = new Date(currentYear, 11, 25)
-    console.log(christmas)
     if (now > christmas) {
         christmas.setFullYear(currentYear + 1)
     }
