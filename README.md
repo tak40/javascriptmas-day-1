@@ -1,4 +1,4 @@
-# co80c4e67af8077afdabe0297
+# JavaScriptmas Day 1: Countdown to Christmas
 
 Quick start:
 
